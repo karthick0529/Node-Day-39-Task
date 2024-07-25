@@ -22,7 +22,7 @@ const CreateStudent = () => {
   };
 
   return (
-    <div>
+    <div className="container">
       <h2>Create Student</h2>
       <form onSubmit={handleSubmit}>
         <input

@@ -29,3 +29,7 @@ export const getMentors = async () => {
 export const getStudents = async () => {
   return await axios.get(`${API_URL}/student`);
 };
+
+export const getPreviousMentor = async (studentId) => {
+  return await axios.get(`${API_URL}/previous-mentor/${studentId}`);
+};

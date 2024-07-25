@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { getStudentsByMentor, getMentors } from '../api';
+import { getMentors, getStudentsByMentor } from '../api';
 
 const StudentsByMentor = () => {
   const [mentors, setMentors] = useState([]);
@@ -25,8 +25,8 @@ const StudentsByMentor = () => {
   }, [selectedMentor]);
 
   return (
-    <div>
-      <h2>Students by Mentor</h2>
+    <div className="container">
+      <h2>Students By Mentor</h2>
       <select
         value={selectedMentor}
         onChange={(e) => setSelectedMentor(e.target.value)}
@@ -39,7 +39,7 @@ const StudentsByMentor = () => {
           </option>
         ))}
       </select>
-      <ul>
+      <ul className="student-list">
         {students.map((student) => (
           <li key={student._id}>{student.name}</li>
         ))}

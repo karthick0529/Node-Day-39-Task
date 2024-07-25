@@ -25,7 +25,7 @@ const ChangeMentor = () => {
   };
 
   return (
-    <div>
+    <div className="container">
       <h2>Change Student Mentor</h2>
       <form onSubmit={handleSubmit}>
         <select

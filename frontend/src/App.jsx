@@ -5,6 +5,7 @@ import CreateStudent from './components/CreateStudent';
 import AssignStudent from './components/AssignStudent';
 import ChangeMentor from './components/ChangeMentor';
 import StudentsByMentor from './components/StudentsByMentor';
+import PreviousMentor from './components/PreviousMentor';
 
 const App = () => {
   return (
@@ -27,6 +28,9 @@ const App = () => {
             <li>
               <Link to="/students-by-mentor">Students by Mentor</Link>
             </li>
+            <li>
+              <Link to="/previous-mentor">Previous Mentor</Link>
+            </li>
           </ul>
         </nav>
 
@@ -36,6 +40,7 @@ const App = () => {
           <Route path="/assign-student" element={<AssignStudent />} />
           <Route path="/change-mentor" element={<ChangeMentor />} />
           <Route path="/students-by-mentor" element={<StudentsByMentor />} />
+          <Route path="/previous-mentor" element={<PreviousMentor />} />
         </Routes>
       </div>
     </Router>

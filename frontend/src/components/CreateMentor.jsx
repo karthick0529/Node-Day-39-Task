@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { createMentor } from '../api';
+
 const CreateMentor = () => {
   const [name, setName] = useState('');
 
@@ -10,7 +11,7 @@ const CreateMentor = () => {
   };
 
   return (
-    <div>
+    <div className="container">
       <h2>Create Mentor</h2>
       <form onSubmit={handleSubmit}>
         <input

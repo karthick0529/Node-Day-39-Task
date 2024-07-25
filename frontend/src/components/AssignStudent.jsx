@@ -33,7 +33,7 @@ const AssignStudent = () => {
   };
 
   return (
-    <div>
+    <div className="container">
       <h2>Assign Students to Mentor</h2>
       <form onSubmit={handleSubmit}>
         <select
@@ -50,7 +50,7 @@ const AssignStudent = () => {
         </select>
         <div>
           {students.map((student) => (
-            <div key={student._id}>
+            <div key={student._id} className="checkbox-container">
               <input
                 type="checkbox"
                 checked={selectedStudents.includes(student._id)}
