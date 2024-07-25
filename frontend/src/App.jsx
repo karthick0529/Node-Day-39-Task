@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import CreateMentor from './components/CreateMentor';
 import CreateStudent from './components/CreateStudent';
 import AssignStudent from './components/AssignStudent';
@@ -30,13 +30,13 @@ const App = () => {
           </ul>
         </nav>
 
-        <Switch>
-          <Route path="/create-mentor" component={CreateMentor} />
-          <Route path="/create-student" component={CreateStudent} />
-          <Route path="/assign-student" component={AssignStudent} />
-          <Route path="/change-mentor" component={ChangeMentor} />
-          <Route path="/students-by-mentor" component={StudentsByMentor} />
-        </Switch>
+        <Routes>
+          <Route path="/create-mentor" element={<CreateMentor />} />
+          <Route path="/create-student" element={<CreateStudent />} />
+          <Route path="/assign-student" element={<AssignStudent />} />
+          <Route path="/change-mentor" element={<ChangeMentor />} />
+          <Route path="/students-by-mentor" element={<StudentsByMentor />} />
+        </Routes>
       </div>
     </Router>
   );
